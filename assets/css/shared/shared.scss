@@ -1,0 +1,208 @@
+:root {
+  --primary-color: #3087eb;
+  --primary-color-dark: #002270;
+  --secondary-color: #000000;
+  --background-color: #ffffff;
+  --default-border-radius: 10vw;
+  --padding-top: 0.5rem;
+  --padding-left: 1rem;
+  --line-border: 1px solid black;
+  --default-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
+  --product-bg: #0070d191;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.desktop-only {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+nav {
+  .centernav {
+    .container {
+      padding: var(--padding-top) var(--padding-left);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        font-weight: 600;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+      }
+      .rightcenternav {
+        display: flex;
+        align-items: center;
+        button {
+          margin-right: 0.6rem;
+          span {
+            font-size: 1.75rem;
+            display: flex;
+          }
+        }
+        button:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .bottomnav {
+    background-color: var(--primary-color-dark);
+    color: var(--background-color);
+    .container {
+      padding: var(--padding-top) var(--padding-left);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .searchbar {
+        width: 100%;
+        color: var(--secondary-color);
+        form {
+          display: flex;
+          width: 100%;
+          position: relative;
+          input {
+            padding: var(--padding-top) var(--padding-left);
+            border-radius: var(--default-border-radius);
+            background-color: var(--background-color);
+            width: 100%;
+            margin-right: var(--padding-top);
+          }
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            padding: var(--padding-top);
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: flex;
+  }
+  nav {
+    .topnav {
+      .container {
+        font-size: 0.85rem;
+        padding: var(--padding-top) 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      border-bottom: var(--line-border);
+    }
+    .centernav {
+      .container {
+        padding: var(--padding-top) 0;
+        .searchbar {
+          hr.horizontal {
+            border-right: var(--line-border);
+            margin: var(--padding-top);
+          }
+          form {
+            margin-right: var(--padding-top);
+            border-radius: var(--default-border-radius);
+            padding: var(--padding-top) var(--padding-left);
+            border: var(--line-border);
+            display: flex;
+            input {
+              width: 100%;
+            }
+            .search-category {
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              span {
+                font-size: 2rem;
+              }
+              h3 {
+                width: max-content;
+                font-size: 0.85rem;
+              }
+            }
+          }
+          button {
+            clip-path: circle();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: var(--primary-color);
+            padding: var(--padding-top);
+            span {
+              font-size: 1.75rem;
+            }
+          }
+        }
+        .rightcenternav {
+          display: flex;
+          button {
+            span {
+              font-size: 2rem;
+            }
+          }
+          .basket-btn {
+            display: flex;
+            align-items: center;
+            .basket-info {
+              justify-content: center;
+              margin-left: var(--padding-left);
+              display: flex;
+              flex-direction: column;
+              h3 {
+                font-size: 0.8rem;
+              }
+              h1 {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+    .bottomnav {
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--padding-top) 0;
+        .category {
+          cursor: pointer;
+          margin-right: var(--padding-top);
+          a {
+            display: flex;
+            align-items: center;
+          }
+        }
+        .help-button {
+          padding: var(--padding-top) var(--padding-top);
+          background-color: var(--primary-color);
+          line-height: 1.2;
+          border-radius: 0.75rem;
+          display: flex;
+          align-items: center;
+          span {
+            margin-right: 0.5rem;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

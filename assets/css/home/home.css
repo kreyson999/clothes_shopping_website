@@ -1,0 +1,238 @@
+header .container {
+  padding: var(--padding-left);
+}
+
+header .container .header-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .container .header-row .order-1 {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+header .container .header-row .header-col .header-hotdrop {
+  margin-bottom: var(--padding-left);
+  padding: var(--padding-left);
+  overflow: hidden;
+  border-radius: var(--padding-left);
+  border: var(--line-border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .header-row .header-col .header-hotdrop h1 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+header .container .header-row .header-col .header-hotdrop .timer {
+  background-color: var(--primary-color);
+  padding: var(--padding-top) var(--padding-left);
+  border-radius: var(--default-border-radius);
+  color: var(--background-color);
+}
+
+header .container .header-row .header-col .header-hotdrop .hotdrop-price {
+  text-align: center;
+  margin: var(--padding-left) 0;
+  font-size: 1.1rem;
+}
+
+header .container .header-row .header-col .header-hotdrop .hotdrop-price .old-price {
+  text-decoration: line-through;
+  color: #696969;
+}
+
+header .container .header-row .header-col .header-hotdrop .hotdrop-price .now-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header .container .header-row .header-col .header-category {
+  margin-bottom: var(--padding-left);
+  border-radius: var(--padding-left);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 12.5rem;
+}
+
+header .container .header-row .header-col .header-category img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .container .header-row .header-col .header-category h3 {
+  width: 100%;
+  text-align: center;
+  padding: var(--padding-top);
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .container .carousel img {
+  -webkit-box-shadow: var(--default-box-shadow);
+          box-shadow: var(--default-box-shadow);
+  height: 15rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--padding-left);
+}
+
+.product-section .container .section-title {
+  padding: var(--padding-left);
+  text-align: center;
+}
+
+.product-section .container .section-title h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.product-section .product-carousel {
+  background-color: var(--primary-color-dark);
+}
+
+.product-section .product-carousel .container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-section .product-carousel .container {
+  scrollbar-width: none;
+  overflow-x: scroll;
+  padding: var(--padding-left) 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.product-section .product-carousel .container .product-card:first-child {
+  margin-left: var(--padding-left);
+}
+
+.product-section .product-carousel .container .product-card {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-shadow: var(--default-box-shadow);
+          box-shadow: var(--default-box-shadow);
+  border-radius: var(--padding-left);
+  overflow: hidden;
+  margin: 0 var(--padding-left) 0 0;
+  width: 28ch;
+  height: 40ch;
+  color: white;
+  background-color: var(--product-bg);
+}
+
+.product-section .product-carousel .container .product-card .top-product {
+  height: 79%;
+}
+
+.product-section .product-carousel .container .product-card .top-product img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-section .product-carousel .container .product-card .bottom-product {
+  padding: var(--padding-top);
+  position: relative;
+  height: 100%;
+}
+
+.product-section .product-carousel .container .product-card .bottom-product h3 {
+  text-overflow: ellipsis;
+  position: relative;
+  height: 12%;
+}
+
+.product-section .product-carousel .container .product-card .bottom-product .product-price {
+  text-align: right;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  header .container .header-row {
+    margin-bottom: var(--padding-left);
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header .container .header-row .order-1 {
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
+  }
+  header .container .header-row .header-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: var(--padding-left);
+    width: 100%;
+  }
+  header .container .header-row .header-col hr {
+    margin: var(--padding-top) 0;
+    border-top: var(--line-border);
+  }
+  header .container .header-row .header-col .header-hotdrop {
+    border: unset;
+  }
+  header .container .header-row .header-col .header-category {
+    -webkit-box-shadow: var(--default-box-shadow);
+            box-shadow: var(--default-box-shadow);
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+  header .container .header-row .header-border {
+    border-left: var(--line-border);
+    border-right: var(--line-border);
+  }
+}
+/*# sourceMappingURL=home.css.map */
