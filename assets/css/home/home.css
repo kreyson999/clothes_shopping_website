@@ -146,6 +146,13 @@ header .container .carousel img {
   margin-left: var(--padding-left);
 }
 
+.product-section .product-carousel .container .product-card:hover .top-product .product-moreinfo,
+.product-section .product-carousel .container .product-card:focus .top-product .product-moreinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .product-section .product-carousel .container .product-card {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -161,6 +168,7 @@ header .container .carousel img {
 }
 
 .product-section .product-carousel .container .product-card .top-product {
+  position: relative;
   height: 79%;
 }
 
@@ -169,6 +177,88 @@ header .container .carousel img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.product-section .product-carousel .container .product-card .top-product .product-moreinfo {
+  border-radius: var(--padding-top) var(--padding-top) 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: var(--background-color);
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: var(--padding-top);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-section .product-carousel .container .product-card .top-product .product-moreinfo .product-sizes .sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-section .product-carousel .container .product-card .top-product .product-moreinfo .product-sizes .sizes .size-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.25rem;
+  margin: 0 0.25rem;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.75rem;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.product-section .product-carousel .container .product-card .top-product .product-moreinfo .product-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-section .product-carousel .container .product-card .top-product .product-moreinfo .product-btns button {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-right: var(--padding-top);
+  color: var(--primary-color);
+  padding: var(--padding-top);
+  background-color: rgba(255, 255, 255, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: var(--padding-top);
+}
+
+.product-section .product-carousel .container .product-card .top-product .product-moreinfo .product-btns button span {
+  font-size: 1.75rem;
+}
+
+.product-section .product-carousel .container .product-card .top-product .product-moreinfo .product-btns button:last-child {
+  margin-right: 0;
 }
 
 .product-section .product-carousel .container .product-card .bottom-product {

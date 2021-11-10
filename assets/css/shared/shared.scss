@@ -20,8 +20,18 @@ body {
 button {
   cursor: pointer;
 }
+nav.active {
+  position: sticky;
+  width: 100%;
+  z-index: 999;
+  box-shadow: var(--default-box-shadow);
+  .topnav {
+    display: none;
+  }
+}
 nav {
   .centernav {
+    background-color: var(--background-color);
     .container {
       padding: var(--padding-top) var(--padding-left);
       display: flex;
@@ -179,18 +189,53 @@ nav {
     .bottomnav {
       .container {
         display: flex;
+        position: relative;
         justify-content: space-between;
         align-items: center;
-        padding: var(--padding-top) 0;
+        padding: unset;
+        .category:hover .category-menu,
+        .category:focus .category-menu {
+          opacity: 1;
+          pointer-events: unset;
+        }
         .category {
+          height: 4rem;
           cursor: pointer;
           margin-right: var(--padding-top);
+          display: flex;
+          align-items: center;
           a {
             display: flex;
             align-items: center;
           }
+          .category-name {
+            display: flex;
+            align-items: center;
+          }
+          .category-menu {
+            transition: opacity 0.5s;
+            padding: var(--padding-left);
+            width: 100%;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            z-index: 999;
+            margin-top: 4rem;
+            left: 0;
+            box-shadow: var(--default-box-shadow);
+            border-radius: 0 0 var(--padding-left) var(--padding-left);
+            top: 0;
+            color: black;
+            background-color: white;
+            h1 {
+              font-weight: bold;
+            }
+          }
         }
         .help-button {
+          margin: var(--padding-top) 0;
           padding: var(--padding-top) var(--padding-top);
           background-color: var(--primary-color);
           line-height: 1.2;

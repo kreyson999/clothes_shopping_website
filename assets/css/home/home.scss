@@ -109,6 +109,10 @@ header {
       .product-card:first-child {
         margin-left: var(--padding-left);
       }
+      .product-card:hover .top-product .product-moreinfo,
+      .product-card:focus .top-product .product-moreinfo {
+        display: flex;
+      }
       .product-card {
         flex-shrink: 0;
         box-shadow: var(--default-box-shadow);
@@ -120,11 +124,65 @@ header {
         color: white;
         background-color: var(--product-bg);
         .top-product {
+          position: relative;
           height: 79%;
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+          }
+          .product-moreinfo {
+            border-radius: var(--padding-top) var(--padding-top) 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: var(--background-color);
+            background-color: rgba(0, 0, 0, 0.55);
+            padding: var(--padding-top);
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            .product-sizes {
+              .sizes {
+                display: flex;
+                .size-item {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 0.25rem;
+                  margin: 0 0.25rem;
+                  border-radius: 50%;
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  font-size: 0.75rem;
+                  background-color: var(--background-color);
+                  color: var(--secondary-color);
+                  font-weight: bold;
+                }
+              }
+            }
+            .product-btns {
+              display: flex;
+              button {
+                flex-grow: 0;
+                height: min-content;
+                margin-right: var(--padding-top);
+                color: var(--primary-color);
+                padding: var(--padding-top);
+                background-color: rgba(255, 255, 255, 0.75);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: var(--padding-top);
+                span {
+                  font-size: 1.75rem;
+                }
+              }
+              button:last-child {
+                margin-right: 0;
+              }
+            }
           }
         }
         .bottom-product {

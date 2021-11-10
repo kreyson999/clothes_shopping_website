@@ -23,6 +23,23 @@ button {
   cursor: pointer;
 }
 
+nav.active {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  z-index: 999;
+  -webkit-box-shadow: var(--default-box-shadow);
+          box-shadow: var(--default-box-shadow);
+}
+
+nav.active .topnav {
+  display: none;
+}
+
+nav .centernav {
+  background-color: var(--background-color);
+}
+
 nav .centernav .container {
   padding: var(--padding-top) var(--padding-left);
   display: -webkit-box;
@@ -246,17 +263,30 @@ nav .bottomnav .container .searchbar form button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: var(--padding-top) 0;
+    padding: unset;
+  }
+  nav .bottomnav .container .category:hover .category-menu,
+  nav .bottomnav .container .category:focus .category-menu {
+    opacity: 1;
+    pointer-events: unset;
   }
   nav .bottomnav .container .category {
+    height: 4rem;
     cursor: pointer;
     margin-right: var(--padding-top);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   nav .bottomnav .container .category a {
     display: -webkit-box;
@@ -266,7 +296,43 @@ nav .bottomnav .container .searchbar form button {
         -ms-flex-align: center;
             align-items: center;
   }
+  nav .bottomnav .container .category .category-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .bottomnav .container .category .category-menu {
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    padding: var(--padding-left);
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    z-index: 999;
+    margin-top: 4rem;
+    left: 0;
+    -webkit-box-shadow: var(--default-box-shadow);
+            box-shadow: var(--default-box-shadow);
+    border-radius: 0 0 var(--padding-left) var(--padding-left);
+    top: 0;
+    color: black;
+    background-color: white;
+  }
+  nav .bottomnav .container .category .category-menu h1 {
+    font-weight: bold;
+  }
   nav .bottomnav .container .help-button {
+    margin: var(--padding-top) 0;
     padding: var(--padding-top) var(--padding-top);
     background-color: var(--primary-color);
     line-height: 1.2;
