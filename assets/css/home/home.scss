@@ -92,6 +92,7 @@ header {
     }
   }
   .product-carousel {
+    position: relative;
     background-color: var(--primary-color-dark);
     .container::-webkit-scrollbar {
       display: none;
@@ -102,6 +103,7 @@ header {
       max-width: unset;
       scrollbar-width: none;
       overflow-x: scroll;
+      scroll-behavior: smooth;
       padding: var(--padding-left) calc((100% - 1170px) / 2) var(--padding-left)
         calc((100% - 1170px) / 2);
       display: flex;
@@ -301,6 +303,34 @@ header {
     .container {
       margin: 3rem auto;
       flex-direction: row;
+    }
+  }
+  .product-section {
+    .product-carousel {
+      .section-btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        background-color: var(--primary-color);
+        padding: var(--padding-top);
+        border-radius: var(--default-border-radius);
+        box-shadow: var(--default-box-shadow);
+        z-index: 10;
+        span {
+          font-size: 2rem;
+        }
+      }
+      .btn-left {
+        left: var(--padding-left);
+      }
+      .btn-right {
+        right: var(--padding-left);
+      }
     }
   }
 }

@@ -122,6 +122,7 @@ header .container .carousel img {
 }
 
 .product-section .product-carousel {
+  position: relative;
   background-color: var(--primary-color-dark);
 }
 
@@ -135,6 +136,7 @@ header .container .carousel img {
   max-width: unset;
   scrollbar-width: none;
   overflow-x: scroll;
+  scroll-behavior: smooth;
   padding: var(--padding-left) calc((100% - 1170px) / 2) var(--padding-left) calc((100% - 1170px) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -418,6 +420,38 @@ header .container .carousel img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .product-section .product-carousel .section-btn {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: white;
+    background-color: var(--primary-color);
+    padding: var(--padding-top);
+    border-radius: var(--default-border-radius);
+    -webkit-box-shadow: var(--default-box-shadow);
+            box-shadow: var(--default-box-shadow);
+    z-index: 10;
+  }
+  .product-section .product-carousel .section-btn span {
+    font-size: 2rem;
+  }
+  .product-section .product-carousel .btn-left {
+    left: var(--padding-left);
+  }
+  .product-section .product-carousel .btn-right {
+    right: var(--padding-left);
   }
 }
 /*# sourceMappingURL=home.css.map */
