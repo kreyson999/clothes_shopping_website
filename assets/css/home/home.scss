@@ -102,7 +102,7 @@ header {
       max-width: unset;
       scrollbar-width: none;
       overflow-x: scroll;
-      padding: var(--padding-left) 0 var(--padding-left)
+      padding: var(--padding-left) calc((100% - 1170px) / 2) var(--padding-left)
         calc((100% - 1170px) / 2);
       display: flex;
       width: 100%;

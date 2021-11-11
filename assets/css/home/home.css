@@ -135,7 +135,7 @@ header .container .carousel img {
   max-width: unset;
   scrollbar-width: none;
   overflow-x: scroll;
-  padding: var(--padding-left) 0 var(--padding-left) calc((100% - 1170px) / 2);
+  padding: var(--padding-left) calc((100% - 1170px) / 2) var(--padding-left) calc((100% - 1170px) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

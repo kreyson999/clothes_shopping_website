@@ -21,10 +21,10 @@ button {
   cursor: pointer;
 }
 nav.active {
-  position: sticky;
+  position: fixed;
   width: 100%;
   z-index: 999;
-  box-shadow: var(--default-box-shadow);
+  box-shadow: 0 0 0.5rem rgb(0, 0, 0);
   .topnav {
     display: none;
   }
@@ -90,6 +90,22 @@ nav {
             padding: var(--padding-top);
           }
         }
+      }
+    }
+  }
+}
+footer {
+  margin-top: calc(var(--padding-left) * 3);
+  background-color: var(--secondary-color);
+  color: white;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .footer-item {
+      margin: var(--padding-left);
+      h1 {
+        font-weight: bold;
       }
     }
   }
@@ -162,6 +178,9 @@ nav {
         }
         .rightcenternav {
           display: flex;
+          button:hover {
+            color: var(--primary-color);
+          }
           button {
             span {
               font-size: 2rem;
@@ -213,6 +232,7 @@ nav {
             align-items: center;
           }
           .category-menu {
+            overflow: hidden;
             transition: opacity 0.5s;
             padding: var(--padding-left);
             width: 100%;
@@ -224,11 +244,11 @@ nav {
             z-index: 999;
             margin-top: 4rem;
             left: 0;
-            box-shadow: var(--default-box-shadow);
             border-radius: 0 0 var(--padding-left) var(--padding-left);
             top: 0;
             color: black;
-            background-color: white;
+            background-color: var(--background-color);
+            box-shadow: var(--default-box-shadow);
             h1 {
               font-weight: bold;
             }
