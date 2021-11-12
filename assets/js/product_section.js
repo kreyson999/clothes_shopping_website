@@ -8,13 +8,9 @@ function scroll(section) {
     const btnLeft = section.querySelector('.btn-left');
     const btnRight = section.querySelector('.btn-right');
     btnLeft.addEventListener('click', () => {
-        console.log(productWidth);
         carousel.scrollLeft -= productWidth;
-        console.log(carousel.scrollLeft);
     });
     btnRight.addEventListener('click', () => {
-        console.log(productWidth);
         carousel.scrollLeft += productWidth;
-        console.log(carousel.scrollLeft);
     });
 }

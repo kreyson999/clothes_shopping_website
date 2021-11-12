@@ -9,6 +9,7 @@
   --line-border: 1px solid black;
   --default-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
   --product-bg: #0070d191;
+  --carousel-time: 10s;
 }
 
 body {

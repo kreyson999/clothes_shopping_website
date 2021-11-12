@@ -19,6 +19,7 @@ header .container .header-row .order-1 {
 }
 
 header .container .header-row .header-col .header-hotdrop {
+  cursor: pointer;
   margin-bottom: var(--padding-left);
   padding: var(--padding-left);
   overflow: hidden;
@@ -39,16 +40,50 @@ header .container .header-row .header-col .header-hotdrop {
           align-items: center;
 }
 
+header .container .header-row .header-col .header-hotdrop .timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .header-row .header-col .header-hotdrop .timer .timer-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: var(--padding-left);
+}
+
+header .container .header-row .header-col .header-hotdrop .timer .timer-item p {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+
+header .container .header-row .header-col .header-hotdrop .timer .timer-item h1 {
+  background-color: var(--primary-color);
+  padding: var(--padding-top);
+  border-radius: var(--padding-left);
+  color: var(--background-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header .container .header-row .header-col .header-hotdrop .timer .timer-item:last-child {
+  margin-right: 0;
+}
+
 header .container .header-row .header-col .header-hotdrop h1 {
   font-size: 1.25rem;
   text-align: center;
-}
-
-header .container .header-row .header-col .header-hotdrop .timer {
-  background-color: var(--primary-color);
-  padding: var(--padding-top) var(--padding-left);
-  border-radius: var(--default-border-radius);
-  color: var(--background-color);
 }
 
 header .container .header-row .header-col .header-hotdrop .hotdrop-price {
@@ -101,14 +136,47 @@ header .container .header-row .header-col .header-category h3 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-header .container .carousel img {
-  -webkit-box-shadow: var(--default-box-shadow);
-          box-shadow: var(--default-box-shadow);
-  height: 15rem;
+header .container .carousel {
+  position: relative;
   width: 100%;
+  height: 15rem;
+  border-radius: var(--padding-left);
+  overflow-x: hidden;
+}
+
+header .container .carousel .carousel-track {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+header .container .carousel .carousel-track .carousel-item {
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: var(--padding-left);
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+header .container .carousel .carousel-track .carousel-item img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: var(--padding-left);
 }
 
 .product-section .container .section-title {
