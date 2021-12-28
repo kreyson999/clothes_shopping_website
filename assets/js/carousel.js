@@ -4,6 +4,8 @@ const carouselTime = parseInt(getComputedStyle(document.body).getPropertyValue('
 let currentIndex = 0;
 
 carouselItems.forEach((item, index) => {
+    const itemImage = item.querySelector('img');
+    itemImage ? itemImage.addEventListener('dragstart', (e) => e.preventDefault()) : null;
     console.log(item.getBoundingClientRect().width);
     item.style.left = `${item.getBoundingClientRect().width * index}px`
 });

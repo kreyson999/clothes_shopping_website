@@ -22,7 +22,7 @@ navObserver.observe(header);
 
 const countdown = document.querySelector('.timer');
 const headerHotdropTimer = document.querySelector('.timer');
-const dateToEnd = new Date('Nov 30, 2021 00:00').getTime();
+const dateToEnd = new Date('Dec 30, 2021 00:00').getTime();
 
 var updateDate = setInterval(function() {
     let now = new Date().getTime();
